@@ -9,7 +9,7 @@
 以下是源代碼，包含一個自定義組件 CustomComponent 和一個使用 CustomComponent 的示例組件。
 
 ```
-htmlCopy code<!-- CustomComponent.vue --><template>
+<!-- CustomComponent.vue --><template>
   <div>
     <h2>自定義元件</h2>
     <slot name="header"></slot>
@@ -19,7 +19,7 @@ htmlCopy code<!-- CustomComponent.vue --><template>
     <slot name="footer"></slot>
   </div></template><script>export default {  name: 'CustomComponent'}</script>
 ``````
-htmlCopy code<!-- App.vue --><template>
+<!-- App.vue --><template>
   <div>
     <custom-component>
       <template slot="header">
@@ -49,13 +49,13 @@ CustomComponent 組件包含三個插槽，分別是 `header`、`default` 和 `f
 header 插槽用於在 CustomComponent 組件的標題位置插入自定義內容。要使用 header 插槽，您可以在 CustomComponent 組件中使用以下代碼：
 
 ```
-htmlCopy code<slot name="header"></slot>
+<slot name="header"></slot>
 ```
 
 然後，在使用 CustomComponent 組件時，您可以使用以下代碼將自定義的內容傳遞給 header 插槽：
 
 ```
-htmlCopy code<custom-component>
+<custom-component>
   <template slot="header">
     <!-- 在這裡插入自定義內容 -->
   </template>
@@ -67,7 +67,7 @@ htmlCopy code<custom-component>
 default 插槽用於在 CustomComponent 組件的內容位置插入自定義內容。要使用 default 插槽，您可以在 CustomComponent 組件中使用以下代碼：
 
 ```
-htmlCopy code<div>
+<div>
   <slot></slot></div>
 ```
 
@@ -75,7 +75,7 @@ htmlCopy code<div>
 碼將自定義的內容傳遞給 default 插槽：
 
 ```
-htmlCopy code<custom-component>
+<custom-component>
   <!-- 在這裡插入自定義內容 --></custom-component>
 ```
 
@@ -84,13 +84,13 @@ htmlCopy code<custom-component>
 footer 插槽用於在 CustomComponent 組件的頁腳位置插入自定義內容。要使用 footer 插槽，您可以在 CustomComponent 組件中使用以下代碼：
 
 ```
-htmlCopy code<slot name="footer"></slot>
+<slot name="footer"></slot>
 ```
 
 然後，在使用 CustomComponent 組件時，您可以使用以下代碼將自定義的內容傳遞給 footer 插槽：
 
 ```
-htmlCopy code<custom-component>
+<custom-component>
   <!-- 其他內容 -->
   <template slot="footer">
     <!-- 在這裡插入自定義內容 -->
@@ -104,7 +104,7 @@ App 組件使用 CustomComponent 組件來展示如何使用插槽實現靈活�
 在 App 組件中，我們首先要將 CustomComponent 組件引入到 App 組件中，使用以下代碼：
 
 ```
-htmlCopy code<script>import CustomComponent from './CustomComponent.vue'export default {  components: {    CustomComponent
+<script>import CustomComponent from './CustomComponent.vue'export default {  components: {    CustomComponent
   }
 }</script>
 ```
