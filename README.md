@@ -114,7 +114,7 @@ App 組件使用 CustomComponent 組件來展示如何使用插槽實現靈活�
 然後，在 App 組件的模板中，我們可以使用以下代碼來使用 CustomComponent 組件：
 
 ```
-htmlCopy code<custom-component>
+<custom-component>
   <template slot="header">
     <h3>這是自定義元件的標題</h3>
   </template>
