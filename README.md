@@ -18,7 +18,9 @@
     </div>
     <slot name="footer"></slot>
   </div></template><script>export default {  name: 'CustomComponent'}</script>
-``````
+```
+
+```
 <!-- App.vue --><template>
   <div>
     <custom-component>
